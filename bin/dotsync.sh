@@ -9,6 +9,9 @@ cp -r "$HOME/.config/rofi" "$HOME/.config/dunst" "$HOME/.config/oxwm" "$dotfiles
 if [ -d "$HOME/.config/alacritty" ]; then
   cp -r "$HOME/.config/alacritty" "$dotfiles_dir/.config/"
 fi
+if [ -d "$HOME/.config/nvim" ]; then
+  cp -r "$HOME/.config/nvim" "$dotfiles_dir/.config/"
+fi
 if [ -f "$HOME/.zshrc" ]; then
   cp "$HOME/.zshrc" "$dotfiles_dir/.zshrc"
 fi
