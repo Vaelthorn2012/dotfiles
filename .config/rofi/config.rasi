@@ -1,0 +1,103 @@
+configuration {
+    modi: "drun,run,window,emoji";
+    show-icons: true;
+    icon-theme: "Papirus-Dark";
+    terminal: "alacritty";
+    drun-display-format: "{name}";
+    disable-history: false;
+    hide-scrollbar: true;
+    display-drun: "󰀻";
+    display-run: "󰆍";
+    display-window: "󱂬";
+    sidebar-mode: false;
+    hover-select: true;
+    me-select-entry: "";
+    me-accept-entry: "MousePrimary";
+}
+
+@theme "/dev/null"
+
+* {
+    obsidian:     #09090b;
+    zinc-900:     #18181b;
+    zinc-800:     #27272a;
+    zinc-700:     #3f3f46;
+    zinc-500:     #71717a;
+    zinc-400:     #a1a1aa;
+    zinc-200:     #e4e4e7;
+    zinc-50:      #fafafa;
+
+    background-color: transparent;
+    text-color:       @zinc-200;
+    font:             "JetBrainsMono Nerd Font 10";
+}
+
+window {
+    width:            480px;
+    background-color: @obsidian;
+    border:           1px solid;
+    border-color:     @zinc-800;
+    border-radius:    6px;
+    padding:          10px;
+}
+
+mainbox {
+    children: [ inputbar, listview ];
+    spacing:  8px;
+}
+
+inputbar {
+    children:         [ prompt, entry ];
+    background-color: @zinc-900;
+    border:           1px solid;
+    border-color:     @zinc-800;
+    border-radius:    4px;
+    padding:          8px 12px;
+    spacing:          10px;
+}
+
+prompt {
+    text-color: @zinc-400;
+}
+
+entry {
+    text-color:        @zinc-50;
+    placeholder:       "Search...";
+    placeholder-color: @zinc-500;
+}
+
+listview {
+    lines:        8;
+    columns:      1;
+    fixed-height: true;
+    scrollbar:    false;
+    spacing:      2px;
+}
+
+element {
+    padding:       7px 10px;
+    border-radius: 4px;
+    spacing:       10px;
+}
+
+element normal.normal,
+element alternate.normal {
+    background-color: transparent;
+    text-color:       @zinc-400;
+}
+
+element selected.normal {
+    background-color: @zinc-900;
+    border:           1px solid;
+    border-color:     @zinc-700;
+    text-color:       @zinc-50;
+}
+
+element-icon {
+    size: 18px;
+}
+
+element-text {
+    text-color: inherit;
+    vertical-align: 0.5;
+}

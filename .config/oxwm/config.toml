@@ -1,0 +1,17 @@
+[general]
+fullscreen = false
+early-exit = true
+corner-roundness = 6
+save-after-copy = false
+default-hide-toolbars = false
+copy-command = "xclip -selection clipboard -t image/png -i"
+
+[color-palette]
+palette = [
+    "#fafafa",
+    "#a1a1aa",
+    "#ef4444",
+    "#22c55e",
+    "#3b82f6",
+    "#eab308"
+]
